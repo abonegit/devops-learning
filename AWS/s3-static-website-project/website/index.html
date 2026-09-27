@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abdul's AWS DevOps Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 35px;
+            color: #e2e8f0;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .skill {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .skill strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+
+        .skill span {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .message {
+            background: rgba(15, 23, 42, 0.4);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="badge">
+            AWS • DEVOPS • CLOUD
+        </div>
+
+        <h1>Welcome to My AWS DevOps Project-CloudFront CDN</h1>
+
+        <p class="intro">
+            This website is part of my DevOps learning journey.
+            It demonstrates how a static website can be deployed using
+            Amazon S3 and delivered globally through Amazon CloudFront.
+        </p>
+
+        <h2>What I'm Learning</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <strong>☁️ Amazon S3</strong>
+                <span>Static website hosting and object storage</span>
+            </div>
+
+            <div class="skill">
+                <strong>🚀 Amazon CloudFront</strong>
+                <span>CDN, caching and HTTPS delivery</span>
+            </div>
+
+            <div class="skill">
+                <strong>🌐 Amazon Route 53</strong>
+                <span>DNS and domain routing</span>
+            </div>
+
+            <div class="skill">
+                <strong>⚙️ DevOps</strong>
+                <span>Cloud infrastructure and deployment practices</span>
+            </div>
+
+        </div>
+
+        <div class="message">
+            <strong>Project Goal</strong><br><br>
+
+            Build, deploy and document a real-world AWS static website
+            architecture while developing practical cloud and DevOps skills.
+        </div>
+
+        <p class="footer">
+            Built as part of my AWS DevOps learning journey.
+        </p>
+
+    </main>
+
+</body>
+</html>
