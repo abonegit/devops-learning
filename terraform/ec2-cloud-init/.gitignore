@@ -1,0 +1,19 @@
+
+# Terraform working files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Local configuration and secrets
+terraform.tfvars
+*.auto.tfvars
+*.pem
+.env
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db

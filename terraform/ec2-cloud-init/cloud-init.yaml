@@ -1,0 +1,304 @@
+#cloud-config
+
+package_update: true
+package_upgrade: false
+
+packages:
+  - nginx
+
+write_files:
+  - path: /var/www/html/index.html
+    owner: root:root
+    permissions: '0644'
+    content: |
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Cloud-Init | Deployment Success</title>
+          <style>
+            * {
+              box-sizing: border-box;
+              margin: 0;
+              padding: 0;
+            }
+
+            body {
+              font-family: Inter, "Segoe UI", Arial, sans-serif;
+              background: #08111f;
+              color: #e5edf8;
+              min-height: 100vh;
+              padding: 32px 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              overflow-x: hidden;
+            }
+
+            body::before {
+              content: "";
+              position: fixed;
+              width: 480px;
+              height: 480px;
+              background: #2563eb;
+              opacity: 0.14;
+              filter: blur(130px);
+              border-radius: 50%;
+              top: -180px;
+              left: -140px;
+              pointer-events: none;
+            }
+
+            body::after {
+              content: "";
+              position: fixed;
+              width: 420px;
+              height: 420px;
+              background: #10b981;
+              opacity: 0.10;
+              filter: blur(130px);
+              border-radius: 50%;
+              bottom: -180px;
+              right: -100px;
+              pointer-events: none;
+            }
+
+            .container {
+              width: 100%;
+              max-width: 920px;
+              position: relative;
+              z-index: 1;
+            }
+
+            .topbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 16px;
+              margin-bottom: 24px;
+            }
+
+            .brand {
+              display: flex;
+              align-items: center;
+              gap: 12px;
+              font-size: 14px;
+              font-weight: 700;
+              letter-spacing: 0.5px;
+            }
+
+            .brand-icon {
+              width: 42px;
+              height: 42px;
+              border-radius: 13px;
+              display: grid;
+              place-items: center;
+              background: linear-gradient(135deg, #2563eb, #0ea5e9);
+              font-size: 22px;
+              box-shadow: 0 8px 25px #2563eb35;
+            }
+
+            .top-label {
+              color: #94a3b8;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+            }
+
+            .hero {
+              border: 1px solid #26364d;
+              border-radius: 26px;
+              padding: 48px;
+              background: linear-gradient(145deg, #142237, #0d1829 70%);
+              box-shadow: 0 28px 80px #00000040;
+            }
+
+            .status {
+              display: inline-flex;
+              align-items: center;
+              gap: 9px;
+              padding: 9px 14px;
+              border-radius: 100px;
+              background: #064e3b55;
+              border: 1px solid #10b98155;
+              color: #6ee7b7;
+              font-size: 12px;
+              font-weight: 700;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+
+            .status-dot {
+              width: 8px;
+              height: 8px;
+              background: #34d399;
+              border-radius: 50%;
+              box-shadow: 0 0 12px #34d39999;
+            }
+
+            h1 {
+              font-size: clamp(34px, 6vw, 56px);
+              line-height: 1.1;
+              letter-spacing: -2px;
+              margin: 25px 0 18px;
+            }
+
+            h1 span {
+              color: #60a5fa;
+            }
+
+            .intro {
+              max-width: 630px;
+              color: #a8b7cc;
+              font-size: 16px;
+              line-height: 1.9;
+            }
+
+            .divider {
+              height: 1px;
+              background: linear-gradient(90deg, #334155, transparent);
+              margin: 32px 0;
+            }
+
+            .section-title {
+              font-size: 12px;
+              color: #94a3b8;
+              text-transform: uppercase;
+              letter-spacing: 1.8px;
+              margin-bottom: 16px;
+            }
+
+            .grid {
+              display: grid;
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+              gap: 14px;
+            }
+
+            .card {
+              background: #0b1728;
+              border: 1px solid #26364d;
+              border-radius: 16px;
+              padding: 21px 18px;
+            }
+
+            .card-icon {
+              font-size: 22px;
+              margin-bottom: 18px;
+            }
+
+            .card h2 {
+              font-size: 15px;
+              margin-bottom: 9px;
+            }
+
+            .card p {
+              color: #94a3b8;
+              font-size: 13px;
+              line-height: 1.7;
+            }
+
+            .footer {
+              margin-top: 25px;
+              display: flex;
+              justify-content: space-between;
+              gap: 14px;
+              flex-wrap: wrap;
+              color: #7f91aa;
+              font-size: 12px;
+            }
+
+            .footer strong {
+              color: #cbd5e1;
+              font-weight: 600;
+            }
+
+            @media (max-width: 650px) {
+              .hero {
+                padding: 28px 22px;
+              }
+
+              .grid {
+                grid-template-columns: 1fr;
+              }
+
+              h1 {
+                letter-spacing: -1px;
+              }
+
+              .top-label {
+                display: none;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <main class="container">
+            <header class="topbar">
+              <div class="brand">
+                <div class="brand-icon">☁</div>
+                <div>CLOUD<span style="color:#60a5fa">INIT</span><br>
+                  <span style="font-size:11px;color:#94a3b8;font-weight:400">INFRASTRUCTURE PROJECT</span>
+                </div>
+              </div>
+              <div class="top-label">DevOps · Infrastructure as Code</div>
+            </header>
+
+            <section class="hero">
+              <div class="status">
+                <span class="status-dot"></span>
+                Deployment successful
+              </div>
+
+              <h1>Your infrastructure.<br>
+                <span>Automated.</span> Delivered.</h1>
+
+              <p class="intro">
+                A cloud server provisioned with Terraform and configured automatically
+                using cloud-init. From infrastructure creation to web server setup,
+                every step was executed as code.
+              </p>
+
+              <div class="divider"></div>
+
+              <p class="section-title">Deployment overview</p>
+
+              <div class="grid">
+                <article class="card">
+                  <div class="card-icon">☁️</div>
+                  <h2>Cloud Infrastructure</h2>
+                  <p>A dedicated AWS network and EC2 instance provisioned using Terraform.</p>
+                </article>
+
+                <article class="card">
+                  <div class="card-icon">⚙️</div>
+                  <h2>Automated Setup</h2>
+                  <p>Cloud-init installed and configured NGINX without manual server setup.</p>
+                </article>
+
+                <article class="card">
+                  <div class="card-icon">🟢</div>
+                  <h2>Web Server Online</h2>
+                  <p>NGINX serves this page over HTTP from your public EC2 instance.</p>
+                </article>
+              </div>
+
+              <footer class="footer">
+                <span>PROJECT <strong>EC2 Cloud-Init Deployment</strong></span>
+                <span>REGION <strong>eu-west-2 · London</strong></span>
+                <span>STATUS <strong>Operational</strong></span>
+              </footer>
+            </section>
+
+            <div class="footer" style="justify-content:center">
+              Built with Terraform · Configured with cloud-init · Hosted on AWS
+            </div>
+          </main>
+        </body>
+        </html>
+
+
+runcmd:
+  - [systemctl, enable, nginx]
+  - [systemctl, restart, nginx]
