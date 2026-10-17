@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: checkout Code
       uses: actions/checkout@v2
