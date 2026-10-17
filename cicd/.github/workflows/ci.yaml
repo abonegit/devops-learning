@@ -8,5 +8,5 @@ jobs:
     steps:
     - name: checkout Code
       uses: actions/checkout@v2
-    -name: We are testing this workflow
-    run: echo Hello everyone  
+    - name: We are testing this workflow
+      run: echo Hello everyone!  
