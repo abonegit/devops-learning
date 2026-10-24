@@ -1,0 +1,41 @@
+
+name: Terraform CI
+
+on:
+  push:
+    paths:
+      - "cicd/task-2/terraform/**"
+      - ".github/workflows/terraform-ci.yml"
+  pull_request:
+    paths:
+      - "cicd/task-2/terraform/**"
+      - ".github/workflows/terraform-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  terraform-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - name: Check formatting
+        working-directory: cicd/task-2/terraform
+        run: terraform fmt -check -recursive
+
+      - name: Initialize Terraform
+        working-directory: cicd/task-2/terraform
+        run: terraform init -backend=false
+
+      - name: Validate configuration
+        working-directory: cicd/task-2/terraform
+        run: terraform validate
