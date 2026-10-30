@@ -22,28 +22,7 @@ Terraform configuration whenever relevant changes are made to the repository.
 
 ## Repository Structure
 
-devops-learning/
-                ├── .github/
-                │   └── workflows/
-                │       ├── application-ci.yml
-                │       ├── docker-publish.yml
-                │       └── terraform-ci.yml
-                │
-                └── cicd/
-                    ├── task-1/
-                    │   ├── app.py
-                    │   ├── test_app.py
-                    │   ├── Dockerfile
-                    │   └── requirements.txt
-                    │
-                    ├── task-2/
-                    │   └── terraform/
-                    │       └── main.tf
-                    │
-                    |
-                    ├── screenshots/
-                    └── README.md
-
+screenshots/repository structure
 ## Project 1: Application CI
 
 Workflow: `.github/workflows/application-ci.yml`
