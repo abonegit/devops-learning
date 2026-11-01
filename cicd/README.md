@@ -155,16 +155,19 @@ Through this project, I gained practical experience with:
 
 During development, I worked through several common issues:
 
-| Challenge                         |               What I learned                                      |
-|                                   |                                                                   
-| Python test failures              | The function's return value must match the expected test result.                `        
-| YAML workflow errors              | Correct YAML syntax, indentation, and event triggers are essential.                         
-| Git conflicts during a rebase     | Conflicts must be resolved carefully before continuing a rebase. 
-| Docker Hub authentication failure | GitHub Actions must receive the correct username variable and token secret. 
-| Workflow file placement           | GitHub Actions workflows must be stored in the repository-root `.github/workflows/` directory. 
-| Terraform formatting              | Terraform formatting checks help maintain consistent configuration. 
+Challenge: Python test failures 
+Solutions:The function's return value must match the expected test result.                `        
+Challenge: YAML workflow errors               
+Solution: Correct YAML syntax, indentation, and event triggers are essential.                         
+Challenge: Git conflicts during a rebase      
+Solution: Conflicts must be resolved carefully before continuing a rebase. 
+Challenge: Docker Hub authentication failure  
+Solution: GitHub Actions must receive the correct username variable and token secret. 
+Challenge: Workflow file placement           
+Solution: GitHub Actions workflows must be stored in the repository-root `.github/workflows/` directory. 
+Challenge: Terraform formatting               
+Solution: Terraform formatting checks help maintain consistent configuration. 
 
-These challenges helped me improve my troubleshooting and debugging skills.
 
 ## Conclusion
 
